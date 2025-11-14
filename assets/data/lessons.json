@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding Renewable Energy",
+    "image": "assets/images/books.jpg",
+    "content": "Renewable energy comes from natural sources that can be replenished. Examples include solar, wind, and hydro power...",
+    "questions": [
+      {
+        "question": "Which of these is a renewable energy source?",
+        "options": ["Coal", "Solar", "Petrol"],
+        "answer": 1
+      },
+      {
+        "question": "Why is renewable energy important?",
+        "options": ["Causes pollution", "Never runs out", "More expensive"],
+        "answer": 1
+      },
+      {
+        "question": "Hydropower is generated from:",
+        "options": ["Sunlight", "Wind", "Water"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Healthy Eating Basics",
+    "image": "assets/images/berry.jpg",
+    "content": "Healthy eating helps your body grow strong. Fruits, vegetables, and whole grains provide vitamins and minerals...",
+    "questions": [
+      {
+        "question": "Which is a healthy food?",
+        "options": ["Chips", "Fruits", "Sweets"],
+        "answer": 1
+      },
+      {
+        "question": "Why do we need vegetables?",
+        "options": ["For vitamins", "For sugar", "No reason"],
+        "answer": 0
+      },
+      {
+        "question": "Whole grains are good because:",
+        "options": ["They are colourful", "They support digestion", "They are fried"],
+        "answer": 1
+      }
+    ]
+  }
+]
