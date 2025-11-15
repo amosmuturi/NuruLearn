@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/lesson.dart';
-import 'quiz_screen.dart'; // make sure this exists
+import 'quiz_screen.dart';
 
 class LessonScreen extends StatelessWidget {
   final Lesson lesson;
@@ -12,6 +12,8 @@ class LessonScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(lesson.title),
+        backgroundColor: const Color(0xFF0066CC),
+        elevation: 4,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -24,16 +26,24 @@ class LessonScreen extends StatelessWidget {
                 child: Image.asset(
                   lesson.image,
                   width: double.infinity,
-                  height: 200,
+                  height: 220,
                   fit: BoxFit.cover,
                 ),
               ),
             const SizedBox(height: 20),
+
+            // Lesson Content
             Text(
               lesson.content,
-              style: const TextStyle(fontSize: 16, height: 1.5),
+              style: const TextStyle(
+                fontSize: 16,
+                height: 1.6,
+                color: Color(0xFF333333),
+              ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
+
+            // START QUIZ BUTTON
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -45,15 +55,23 @@ class LessonScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF0066CC), // Blue theme
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 40, vertical: 15),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    horizontal: 40,
+                    vertical: 16,
                   ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  elevation: 4,
                 ),
                 child: const Text(
                   'Start Quiz',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white, // White text
+                  ),
                 ),
               ),
             ),

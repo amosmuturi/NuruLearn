@@ -32,11 +32,14 @@ class _AnswerButtonState extends State<AnswerButton>
     super.initState();
 
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 300),
       vsync: this,
     );
 
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 1.1).animate(
+    _scaleAnimation = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 1.0, end: 1.15), weight: 50),
+      TweenSequenceItem(tween: Tween(begin: 1.15, end: 1.0), weight: 50),
+    ]).animate(
       CurvedAnimation(parent: _controller, curve: Curves.easeOutBack),
     );
   }
@@ -45,9 +48,9 @@ class _AnswerButtonState extends State<AnswerButton>
   void didUpdateWidget(covariant AnswerButton oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    // Animate green for correct answer if locked
+    // Animate green (correct) button with bounce if locked
     if (widget.showCorrect && widget.isCorrect) {
-      _controller.forward();
+      _controller.forward(from: 0.0);
     } else {
       _controller.reset();
     }
@@ -71,7 +74,7 @@ class _AnswerButtonState extends State<AnswerButton>
     return AnimatedBuilder(
       animation: _controller,
       builder: (_, child) {
-        // Only zoom the green (correct) button
+        // Only bounce the green (correct) button
         final scale = (widget.isCorrect && widget.showCorrect) ? _scaleAnimation.value : 1.0;
 
         return Transform.scale(

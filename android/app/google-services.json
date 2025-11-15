@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163558543292",
+    "project_id": "nuru-app",
+    "storage_bucket": "nuru-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163558543292:android:79573e21a7c1ffbfa265b9",
+        "android_client_info": {
+          "package_name": "com.example.nuru_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsLtmX_pd1AfEho7F295ZXtWsxrfPR_ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
