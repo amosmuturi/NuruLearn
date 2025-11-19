@@ -4,13 +4,43 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+**Running the App
+**
+Run on Android/iOS
+flutter run
 
-A few resources to get you started if this is your first Flutter project:
+Run on Web
+flutter run -d chrome
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**How to Use the App (Step-by-Step)
+**
+Open the app
+You'll see the animated splash screen.
+
+Login or Signup
+Use email + password to create or access your account.
+
+Home Screen (Lessons List)
+Lessons are loaded from assets/data/lessons.json.
+Tap any lesson to open it.
+
+Lesson Screen
+Read through the lesson content.
+Tap Start Quiz at the bottom.
+
+Quiz Screen
+
+Answer multiple-choice questions
+
+Progress bar updates in real time
+
+Tap Next to move through questions
+
+Results Screen
+
+View your score
+
+Retake the quiz
+
+Return to the home screen
