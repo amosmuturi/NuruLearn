@@ -5,7 +5,7 @@ import 'quiz_screen.dart';
 class LessonScreen extends StatelessWidget {
   final Lesson lesson;
 
-  const LessonScreen({Key? key, required this.lesson}) : super(key: key);
+  const LessonScreen({super.key, required this.lesson});
 
   @override
   Widget build(BuildContext context) {

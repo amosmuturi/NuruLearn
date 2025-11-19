@@ -5,7 +5,7 @@ import '../models/lesson.dart';
 import 'lesson_screen.dart'; // make sure this exists
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
